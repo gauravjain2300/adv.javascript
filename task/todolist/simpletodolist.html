@@ -23,10 +23,10 @@
         display: flex;
         flex-direction: column;
         /* justify-content: center; */
-        /* align-items: center; */
+        align-items: center;
       }
 
-      #add {
+      #Addtask {
         width: 400px;
         padding: 10px;
         height: 50px;
@@ -34,6 +34,7 @@
         background-color: brown;
         margin-top: 50px;
         color: white;
+        text-align: center;
         font-weight: 900;
       }
 
@@ -44,40 +45,34 @@
         font-weight: 900;
         color: aliceblue;
         background-color: black;
+        /* text-align: center; */
       }
     </style>
   </head>
   <body>
+    <!-- <button id="btn" onclick="addPara()">Creating Element Dynamically</button> -->
+    <!-- <div id="heading">Dynamically Create Element</div> -->
     <div class="container">
-      <div class="">
-        <input type="text" id="add" placeholder="add task" />
-        <button id="btn-1" onclick="add()">Add</button>
+      <input type="text" id="Addtask" value="" />
+      <button onclick="addPara()" id="btn-1">Click</button>
 
-        <span id="Show"></span>
-
-        <!--  <h1 id="heading">Hello</h1> -->
-        <!-- <button onclick="add()">Click</button> -->
-
-        <p class="show"></p>
+      <div id="display">
+        <p></p>
       </div>
+      <!-- <input type="text" name="" id="heading"> -->
     </div>
 
     <script>
-      //   console.log(typeof task);
+      function addPara() {
+        let b = document.getElementById("Addtask");
+        let node = document.createElement("p");
+        let textNode = document.createTextNode(b.value);
 
-      //   function add() {
-      //     let task = document.getElementById("add").innerText;
-
-      //     let bag = a.string("");
-
-      //     document.getElementById("show").innerText = bag;
-      //   }
-
-      function add() {
-        let node = document.createElement("li");
-        let textnode = document.createTextNode("input");
-        node.appendChild(textnode);
-        document.getElementById("show").appendChild(node);
+        node.innerText = b.value;
+        // console.log(b);
+        node.appendChild(textNode);
+        document.getElementById("display").appendChild(node);
+        // console.log("called");
       }
     </script>
   </body>
