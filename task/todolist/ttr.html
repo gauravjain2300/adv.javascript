@@ -1,36 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-</html>
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
-<input type="text" id="inp" />
-<button id="add">ADD</button>
-<ul></ul>
-<script>
-  let inpData = document.querySelector("#inp");
-
-  let list = document.querySelector("ul");
-  let btn = document.getElementById("add");
-
-  btn.addEventListener("click", function () {
-    let node = document.createElement("div");
-    let text = `<input type="checkbox"><input type="text" value="${inpData.value}" >  <button>Edit</button> <button >Delete</button>`;
-    let textNode = document.createTextNode(text);
-    node.appendChild(textNode);
-    node.innerHTML = text;
-    textNode.appendChild = text;
-    list.appendChild(node);
-
-
-  
-  });
-</script>
+    
 </body>
 </html>
