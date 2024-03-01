@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <style>
+      * {
+        padding: 0;
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .container img {
+        height: 400px;
+      }
+      #row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        /* justify-content: center; */
+        padding-left: 20px;
+      }
+      p {
+        /* padding-bottom: 10px; */
+      }
+      span {
+        font-weight: 900;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="row"></div>
+
+    <script>
+      let card1 = {
+        brandname: "BULLMER",
+        Tshirttype: "printed cotton T-shirt",
+        price: "RS: 1499",
+        image: "image1.jpg",
+      };
+      let card2 = {
+        brandname: "Here & How",
+        Tshirttype: "Gym t-shirt",
+        price: "RS: 1499",
+        image: "image2.jpg",
+      };
+      let card3 = {
+        brandname: "Stormborn",
+        Tshirttype: "printed cotton T-shirt",
+        price: "RS: 399",
+        image: "image3.jpg",
+      };
+      let card4 = {
+        brandname: " H & M",
+        Tshirttype: "printed cotton T-shirt",
+        price: "RS: 1499",
+        image: "image4.jpg",
+      };
+      let card5 = {
+        brandname: "BULLMER",
+        Tshirttype: "printed cotton T-shirt",
+        price: "RS: 1499",
+        image: "image5.jpg",
+      };
+      let card6 = {
+        brandname: "Roadster",
+        Tshirttype: "printed cotton T-shirt",
+        price: "RS: 1499",
+        image: "image6.jpg",
+      };
+      let card7 = {
+        brandname: "Stormborn",
+        Tshirttype: "printed cotton oversized T-shirt",
+        price: "RS: 380",
+        image: "image7.jpg",
+      };
+      let card8 = {
+        brandname: "HRX By Hrithik Roshan",
+        Tshirttype: "Rapid Dry trainning T-shirt",
+        price: "RS: 1499",
+        image: "image8.jpg",
+      };
+      let card9 = {
+        brandname: "Stormborn",
+        Tshirttype: "printed cotton oversized T-shirt",
+        price: "RS: 539",
+        image: "image9.jpg",
+      };
+      let card10 = {
+        brandname: "Stormborn",
+        Tshirttype: "printed cotton oversized T-shirt",
+        price: "RS: 539",
+        image: "image10.jpg",
+      };
+
+      let main = [
+        card1,
+        card2,
+        card3,
+        card4,
+        card5,
+        card6,
+        card7,
+        card8,
+        card9,
+        card10,
+      ];
+
+      function Tshirt() {
+        for (let i = 0; i <= 10; i++) {
+          let store = document.getElementById("row");
+          let gaurav = document.createElement("div");
+          let cards = `<img
+src="${main[i].image}"              alt=""
+            />
+            <h2>${main[i].brandname}</h2>
+            <p>${main[i].Tshirttype}</p>
+            <span>${main[i].price}</span>`;
+
+          gaurav.innerHTML = cards;
+          store.appendChild(gaurav);
+        }
+      }
+      Tshirt();
+
+      //
+    </script>
+  </body>
+</html>

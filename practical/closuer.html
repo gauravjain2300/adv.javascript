@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Closures In JS</h1>
+
+    <p>
+      A closure is the combination of a function bundled together (enclosed)
+      with references to its surrounding state (the lexical environment).
+    </p>
+    <p>
+      A function bundled together with its lexical environment makes a closure.+
+    </p>
+    <p>functions are the heart of JavaScript.</p>
+
+    <script>
+      function closur() {
+        let c = 30;
+
+        function outerOuter() {
+          let b = 20;
+
+          function outside() {
+            console.log(b);
+            let a = 10;
+            function inner() {
+              //   console.log(c);
+              //   console.log(b);
+              console.log(a);
+            }
+            inner();
+          }
+          outside();
+        }
+        outerOuter();
+
+        function greet() {
+          outerOuter();
+        }
+        greet();
+      }
+      closur();
+    </script>
+  </body>
+</html>
