@@ -17,7 +17,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 50px;
-        /* justify-content: center; */
+
         padding-left: 20px;
       }
 
@@ -106,7 +106,7 @@
 
       function Tshirt() {
         for (let i = 0; i <= 10; i++) {
-          let store = document.getElementById("row");
+          let row = document.getElementById("row");
           let gaurav = document.createElement("div");
           let cards = `<img
 src="${main[i].image}"              alt=""
@@ -116,12 +116,10 @@ src="${main[i].image}"              alt=""
             <span>${main[i].price}</span>`;
 
           gaurav.innerHTML = cards;
-          store.appendChild(gaurav);
+          row.appendChild(gaurav);
         }
       }
       Tshirt();
-
-      //
     </script>
   </body>
 </html>

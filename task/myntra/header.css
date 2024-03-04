@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flat5 img {
+  width: 100%;
+}
+.birthday {
+  display: flex;
+
+  justify-content: start;
+}
+.col-25 img {
+  width: 100%;
+}
+.coupons img {
+  width: 100%;
+}
+.discount {
+  display: flex;
+  width: 50%;
+}
+.discount img {
+  width: 100%;
+}
+
+footer {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+
+  width: 100%;
+  padding-top: 50px;
+
+  margin: 0 auto;
+
+  padding-bottom: 50px;
+  background-color: #fafbfc;
+}
+ol li {
+  list-style: none;
+  color: gray;
+  line-height: 30px;
+}
+ul {
+  padding-bottom: 20px;
+  list-style: none;
+  font-weight: 900;
+}
+a {
+  text-decoration: none;
+}
+.applestore {
+  display: flex;
+  width: 15%;
+}
+.applestore img {
+  width: 100%;
+}
