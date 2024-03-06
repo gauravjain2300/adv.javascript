@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .box {
+        /* border: 1px solid black; */
+        /* width: 50%; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+      }
+      .Price {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        /* height: 400px; */
+
+        justify-content: space-around;
+      }
+      .MRP {
+        border: 1px solid black;
+        display: flex;
+        justify-content: space-between;
+        width: 400px;
+        /* height: 100px; */
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+      h3 {
+        font-size: 30px;
+        text-align: center;
+        padding-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>
+        <h3>Price Details</h3>
+
+        <div class="Price">
+          <div class="MRP">
+            <p>1 item Mrp :</p>
+            <span id="Qty_price">999</span>
+          </div>
+          <div class="MRP">
+            <span>Qty : </span>
+            <input
+              type="number"
+              id="num"
+              oninput="calc()"
+              min="1"
+              max="10"
+              value="1"
+            />
+          </div>
+
+          <div class="MRP">
+            <p>Total amount: <b></b></p>
+            <span id="total">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function calc() {
+        let price = document.getElementById("Qty_price").innerHTML;
+        let Tshirt = document.getElementById("num").value;
+        let total = parseFloat(price) * Tshirt;
+        if (!isNaN(total)) document.getElementById("total").innerHTML = total;
+      }
+    </script>
+  </body>
+</html>

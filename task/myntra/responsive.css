@@ -1,14 +1,21 @@
 @media (max-width: 1400px) {
   .applestore {
     display: flex;
-    width: 28%;
+    width: 19%;
+  }
+
+  footer {
+    gap: 100px;
   }
 }
 
 @media (max-width: 1200px) {
+  footer {
+    gap: 80px;
+  }
   .applestore {
     display: flex;
-    width: 28%;
+    width: 15%;
   }
 }
 
