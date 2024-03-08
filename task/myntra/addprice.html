@@ -21,12 +21,20 @@
   </div>
 
 
-  <script> function calc() {
+  <script>
+  
+  
+  function calc() {
     let price = document.getElementById("ticket_price").innerHTML;
     let noTickets = document.getElementById("num").value;
     let total = parseFloat(price) * noTickets
     if (!isNaN(total))
       document.getElementById("total").innerHTML = total
-  }</script>
+  }
+  
+  
+  
+  
+  </script>
 </body>
 </html>
